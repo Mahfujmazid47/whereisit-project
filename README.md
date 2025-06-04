@@ -5,6 +5,7 @@ This project is a Lost and Found Website, a platform designed to connect individ
 - npm i react-router
 - npm install tailwindcss@latest @tailwindcss/vite@latest daisyui@latest
 - npm install firebase
+- npm install react-icons --save
 - 
 
 

@@ -8,3 +8,7 @@ body {
   font-family: "Raleway", sans-serif;
   font-optical-sizing: auto;
 }
+
+a.active{
+  @apply btn bg-purple-400 text-white transition-all duration-300 ease-in-out transform hover:scale-105 active:scale-95 hover:shadow-lg
+}
