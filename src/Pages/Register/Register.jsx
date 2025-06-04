@@ -7,29 +7,58 @@ import Swal from 'sweetalert2';
 
 const Register = () => {
 
-    const { createUser } = useAuth();
+    const { createUser, updateUser, setUser } = useAuth();
     const navigate = useNavigate();
 
     const [isVisible, setIsVisible] = useState();
+    const [errorMessage, setErrorMessage] = useState('');
 
     const handleSubmit = e => {
         e.preventDefault();
         const form = e.target;
         const formData = new FormData(form);
-        const { email, password, ...restInfo } = Object.fromEntries(formData.entries());
-        console.log(email, password, restInfo);
+        const { email, password, name, photo } = Object.fromEntries(formData.entries());
+        // console.log(email, password);
+
+
+        setErrorMessage('');
+
+        if (password.length < 6) {
+            setErrorMessage("Password must be at least 6 characters");
+            return
+        }
+        else if (!/[A-Z]/.test(password)) {
+            setErrorMessage("Password must contain at least one uppercase letter");
+            return
+        }
+        else if (!/[a-z]/.test(password)) {
+            setErrorMessage("Password must contain at least one Lowercase letter");
+            return
+        }
+
+
 
         createUser(email, password)
             .then(result => {
-                console.log(result.user);
-                Swal.fire({
-                    position: "center",
-                    icon: "success",
-                    title: "Your work has been saved",
-                    showConfirmButton: false,
-                    timer: 1500
-                });
-                navigate('/');
+                const user = result.user;
+                console.log(user);
+
+                updateUser({ displayName: name, photoURL: photo })
+                    .then(() => {
+                        setUser({ ...user, displayName: name, photoURL: photo });
+
+                        Swal.fire({
+                            position: "center",
+                            icon: "success",
+                            title: "Registration Successful!",
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+                        navigate('/');
+
+                    })
+                    .catch(error => console.log(error))
+
             })
             .catch(error => console.log(error))
 
@@ -79,7 +108,7 @@ const Register = () => {
                                     </button>
                                 </div>
 
-                                {/* <p className='font-semibold text-purple-500'>{errorMessage}</p> */}
+                                <p className='font-semibold text-red-500'>{errorMessage}</p>
 
                                 <button className="btn mt-4 bg-purple-400 text-white md:px-4 transition-all hover:font-semibold hover:rounded hover:duration-300 hover:ease-in-out hover:transform hover:scale-105 active:scale-95 hover:shadow-lg">Register</button>
 

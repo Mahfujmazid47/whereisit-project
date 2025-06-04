@@ -1,9 +1,32 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router';
+import { Link, NavLink, useNavigate } from 'react-router';
+import useAuth from '../Hooks/useAuth';
+import Swal from 'sweetalert2';
 
 const Navbar = () => {
 
+    const { user, logoutUser } = useAuth();
+    const navigate = useNavigate()
+
+    const handleLogOut = () => {
+        logoutUser()
+            .then(() => {
+                Swal.fire({
+                    position: "center",
+                    icon: "success",
+                    title: "Logout Successful!",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+                navigate('/')
+            })
+    }
+
     const links = <>
+        <NavLink className='p-2 hover:text-purple-400 hover:bg-white md:px-4 transition-all hover:font-semibold hover:rounded hover:duration-300 hover:ease-in-out hover:transform hover:scale-105 active:scale-95 hover:shadow-lg' to="/">Home</NavLink>
+    </>
+
+    const links2 = <>
         <NavLink className='p-2 hover:text-purple-400 hover:bg-white md:px-4 transition-all hover:font-semibold hover:rounded hover:duration-300 hover:ease-in-out hover:transform hover:scale-105 active:scale-95 hover:shadow-lg' to="/">Home</NavLink>
     </>
 
@@ -35,31 +58,40 @@ const Navbar = () => {
                 </div>
 
                 <div className="navbar-end flex items-center gap-2">
-                   
 
-                    <>
-                        <NavLink className='p-2 btn hover:text-white hover:bg-purple-400 md:px-4 border-2 border-purple-400 transition-all hover:font-semibold rounded hover:duration-300 hover:ease-in-out hover:transform hover:scale-105 active:scale-95 hover:shadow-lg' to="/login">Login</NavLink>
+                    {
+                        user ?
 
-                        <NavLink className='p-2 btn bg-purple-400 text-white md:px-4 transition-all hover:font-semibold rounded hover:duration-300 hover:ease-in-out hover:transform hover:scale-105 active:scale-95 hover:shadow-lg' to="/register">Register</NavLink>
-                    </>
-
-                    {/* <div>
-                        {user && (
                             <>
-                                <div className="dropdown dropdown-hover dropdown-end cursor-pointer">
 
-                                    <div className='p-1'>
-                                        <img className='w-10 h-10 object-contain rounded-full' src={user.photoURL} alt="" />
+                                <div className='flex items-center gap-1'>
+                                    <div className="tooltip hover:tooltip-open tooltip-bottom cursor-pointer" data-tip={user.displayName}>
+                                        <div className='p-1'>
+                                            <div className="dropdown dropdown-end">
+                                                <div tabIndex={0} role="button" className="">
+                                                    <img className='w-10 h-10 object-contain rounded-full' src={user.photoURL} alt="" />
+                                                </div>
+                                                <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+                                                {links2}
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
-                                        <li className=' text-sm font-semibold text-center'>{user.displayName}</li>
-                                        <li className='pb-2 text-sm font-semibold text-center'>{user.email}</li>
-                                        <button onClick={handleLogOut} className='btn bg-purple-400 text-white md:px-4 transition-all hover:font-semibold hover:rounded hover:duration-300 hover:ease-in-out hover:transform hover:scale-105 active:scale-95 hover:shadow-lg'>Log Out</button>
-                                    </ul>
+
+                                    <button onClick={handleLogOut} className='p-2 btn hover:text-white hover:bg-purple-400 md:px-4 border-2 border-purple-400 transition-all hover:font-semibold rounded hover:duration-300 hover:ease-in-out hover:transform hover:scale-105 active:scale-95 hover:shadow-lg'>Logout</button>
                                 </div>
                             </>
-                        )}
-                    </div> */}
+
+                            :
+                            <>
+                                <NavLink className='p-2 btn hover:text-white hover:bg-purple-400 md:px-4 border-2 border-purple-400 transition-all hover:font-semibold rounded hover:duration-300 hover:ease-in-out hover:transform hover:scale-105 active:scale-95 hover:shadow-lg' to="/login">Login</NavLink>
+
+                                <NavLink className='p-2 btn bg-purple-400 text-white md:px-4 transition-all hover:font-semibold rounded hover:duration-300 hover:ease-in-out hover:transform hover:scale-105 active:scale-95 hover:shadow-lg' to="/register">Register</NavLink>
+                            </>
+                    }
+
+
+
                 </div>
             </div>
         </div>

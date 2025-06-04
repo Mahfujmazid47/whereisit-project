@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
 import { Fade } from 'react-awesome-reveal';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
-import { Link } from 'react-router';
+import { Link, useNavigate } from 'react-router';
+import useAuth from '../../Hooks/useAuth';
+import Swal from 'sweetalert2';
 
 const Login = () => {
+
+    const { logInUser } = useAuth();
+    const navigate = useNavigate();
 
     const [isVisible, setIsVisible] = useState();
 
@@ -11,8 +16,22 @@ const Login = () => {
         e.preventDefault();
         const form = e.target;
         const formData = new FormData(form);
-        const {email, password} = Object.fromEntries(formData.entries());
-        console.log(email, password)
+        const { email, password } = Object.fromEntries(formData.entries());
+        // console.log(email, password)
+
+        logInUser(email, password)
+            .then(result => {
+                console.log(result.user)
+                Swal.fire({
+                    position: "center",
+                    icon: "success",
+                    title: "Login Successful!",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+                navigate('/')
+            })
+            .catch(error => console.log(error))
     }
 
     const handleIsVisible = () => {
@@ -20,7 +39,7 @@ const Login = () => {
     }
 
     const handleGoogleLogin = () => {
-        
+
     }
 
     return (
