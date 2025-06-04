@@ -9,6 +9,10 @@ const Login = () => {
 
     const handleSubmit = e => {
         e.preventDefault();
+        const form = e.target;
+        const formData = new FormData(form);
+        const {email, password} = Object.fromEntries(formData.entries());
+        console.log(email, password)
     }
 
     const handleIsVisible = () => {
@@ -29,12 +33,12 @@ const Login = () => {
 
                             {/* Email  */}
                             <label className="label">Email</label>
-                            <input type="email" name='email' className="input mb-4" placeholder="Email" requipurple />
+                            <input type="email" name='email' className="input mb-4" placeholder="Email" required />
 
                             <div className='relative'>
                                 {/* Password  */}
                                 <label className="label">Password</label>
-                                <input type={isVisible ? "text" : "password"} name='password' className="input" placeholder="Password" requipurple />
+                                <input type={isVisible ? "text" : "password"} name='password' className="input" placeholder="Password" required />
 
                                 <button onClick={handleIsVisible}
                                     type='button'

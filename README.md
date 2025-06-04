@@ -6,6 +6,7 @@ This project is a Lost and Found Website, a platform designed to connect individ
 - npm install tailwindcss@latest @tailwindcss/vite@latest daisyui@latest
 - npm install firebase
 - npm install react-icons --save
+- npm install sweetalert2
 - 
 
 
