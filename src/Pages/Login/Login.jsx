@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import { Fade } from 'react-awesome-reveal';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
-import { Link, useNavigate } from 'react-router';
+import { Link, useLocation, useNavigate } from 'react-router';
 import useAuth from '../../Hooks/useAuth';
 import Swal from 'sweetalert2';
 
 const Login = () => {
 
-    const { logInUser } = useAuth();
+    const { logInUser, GoogleLogin,setUser } = useAuth();
     const navigate = useNavigate();
+    const location = useLocation();
 
     const [isVisible, setIsVisible] = useState();
 
@@ -21,7 +22,8 @@ const Login = () => {
 
         logInUser(email, password)
             .then(result => {
-                console.log(result.user)
+                console.log(result.user);
+                navigate(`${location.state ? location.state : '/'}`);
                 Swal.fire({
                     position: "center",
                     icon: "success",
@@ -29,7 +31,7 @@ const Login = () => {
                     showConfirmButton: false,
                     timer: 1500
                 });
-                navigate('/')
+
             })
             .catch(error => console.log(error))
     }
@@ -39,7 +41,20 @@ const Login = () => {
     }
 
     const handleGoogleLogin = () => {
-
+        GoogleLogin()
+            .then(result => {
+                const user = result.user;
+                navigate('/');
+                Swal.fire({
+                    position: "center",
+                    icon: "success",
+                    title: "Google Login Successful!",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+                setUser(user);
+            })
+            .catch(error => console.log(error));
     }
 
     return (

@@ -7,7 +7,7 @@ import Swal from 'sweetalert2';
 
 const Register = () => {
 
-    const { createUser, updateUser, setUser } = useAuth();
+    const { createUser, updateUser, setUser, GoogleLogin } = useAuth();
     const navigate = useNavigate();
 
     const [isVisible, setIsVisible] = useState();
@@ -70,7 +70,20 @@ const Register = () => {
     }
 
     const handleGoogleLogin = () => {
-
+        GoogleLogin()
+            .then(result => {
+                const user = result.user;
+                navigate('/');
+                Swal.fire({
+                    position: "center",
+                    icon: "success",
+                    title: "Google Registration Successful!",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+                setUser(user);
+            })
+            .catch(error => console.log(error));
     }
 
     return (

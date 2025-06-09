@@ -7,6 +7,7 @@ This project is a Lost and Found Website, a platform designed to connect individ
 - npm install firebase
 - npm install react-icons --save
 - npm install sweetalert2
+- npm install react-datepicker --save
 - 
 
 
