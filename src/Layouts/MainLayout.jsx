@@ -6,7 +6,7 @@ import Footer from '../Shared/Footer';
 
 const MainLayout = () => {
     return (
-        <div>
+        <>
             <nav>
                 <Navbar></Navbar>
             </nav>
@@ -18,7 +18,7 @@ const MainLayout = () => {
             <footer>
                 <Footer></Footer>
             </footer>
-        </div>
+        </>
     );
 };
 
