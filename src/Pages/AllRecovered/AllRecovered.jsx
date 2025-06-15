@@ -48,7 +48,7 @@ const AllRecovered = () => {
                         className="flex items-center gap-2 px-4 py-2 border border-purple-300 rounded-md text-sm text-purple-700 hover:bg-purple-100 cursor-pointer transition-all"
                     >
                         {tableFormat ? <TfiLayoutGrid3Alt size={18} /> : <GiHamburgerMenu size={20} />}
-                        <span>{tableFormat ? "Grid View" : "Table View"}</span>
+                        <span>Change Layout</span>
                     </button>
                 </div>
 
