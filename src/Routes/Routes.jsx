@@ -10,6 +10,12 @@ import AddItems from "../Pages/AddItems/AddItems";
 import MyItems from "../Pages/MyItems/MyItems";
 import AllRecovered from "../Pages/AllRecovered/AllRecovered";
 import PrivateRoutes from "./PrivateRoutes";
+import LostFoundItems from "../Pages/LostFoundItems/LostFoundItems";
+import PostDetails from "../Pages/PostDetails/PostDetails";
+import ContactDetails from "../Pages/ContactDetails/ContactDetails";
+import TermsConditions from "../Pages/TermsConditions/TermsConditions";
+import UpdateItems from "../Pages/MyItems/UpdateItems";
+import Loading from "../Shared/Loading";
 
 
 export const router = createBrowserRouter([
@@ -19,7 +25,9 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        Component: Home
+        loader: () => fetch('http://localhost:3000/latestItems'),
+        Component: Home,
+        hydrateFallbackElement: <Loading />
       },
       {
         path: "/login",
@@ -39,19 +47,47 @@ export const router = createBrowserRouter([
       },
       {
         path: "/myItems",
+        loader: () => fetch('http://localhost:3000/items'),
         element: (
           <PrivateRoutes>
             <MyItems />
           </PrivateRoutes>
-        )
+        ),
+        hydrateFallbackElement: <Loading />
       },
       {
         path: "/allRecovered",
+        loader: () => fetch('http://localhost:3000/recoveredItems'),
         element: (
           <PrivateRoutes>
             <AllRecovered />
           </PrivateRoutes>
-        )
+        ),
+        hydrateFallbackElement: <Loading />
+      },
+      {
+        path: "/items/:id",
+        loader: ({ params }) => fetch(`http://localhost:3000/items/${params.id}`),
+        element: (
+          <PrivateRoutes>
+            <PostDetails></PostDetails>
+          </PrivateRoutes>
+        ),
+        hydrateFallbackElement: <Loading />
+      },
+      {
+        path: "/allItems",
+        loader: () => fetch('http://localhost:3000/items'),
+        Component: LostFoundItems,
+        hydrateFallbackElement: <Loading />
+      },
+      {
+        path: '/contactDetails',
+        Component: ContactDetails
+      },
+      {
+        path: '/terms',
+        Component: TermsConditions
       },
     ]
   },

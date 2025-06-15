@@ -15,7 +15,7 @@ const Slider = () => {
                     </div>
                     <Fade direction='right' triggerOnce={true}>
                         <div>
-                            <img className='w-8/12 mx-auto rounded-xl' src="https://img.freepik.com/free-vector/detective-kids-concept-illustration_114360-14825.jpg?ga=GA1.1.1819153903.1738087789&semt=ais_items_boosted&w=740" alt="" />
+                            <img className='w-6/12 md:w-8/12 mx-auto rounded-xl' src="https://img.freepik.com/free-vector/detective-kids-concept-illustration_114360-14825.jpg?ga=GA1.1.1819153903.1738087789&semt=ais_items_boosted&w=740" alt="" />
                         </div>
                     </Fade>
                 </div>

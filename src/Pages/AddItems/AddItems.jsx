@@ -4,27 +4,43 @@ import { Fade } from 'react-awesome-reveal';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import Loading from '../../Shared/Loading';
+import axios from 'axios';
+import Swal from 'sweetalert2';
 
 const AddItems = () => {
 
     const { user } = useAuth();
     const [selectedDate, setSelectedDate] = useState(new Date());
 
-    // if(user === null) {
-    //     return <Loading />
-    // };
 
-    
+    const handleAddItems = e => {
+        e.preventDefault();
+        const form = e.target;
+        const formData = new FormData(form);
+        const itemInfo = Object.fromEntries(formData.entries());
+        // console.log(itemInfo)
 
-    const handleAddItems = () => {
-
+        axios.post('http://localhost:3000/items', itemInfo)
+            .then(res => {
+                console.log(res.data);
+                if (res.data.insertedId) {
+                    Swal.fire({
+                        position: "center",
+                        icon: "success",
+                        title: "Item Posted Successfully",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                }
+            })
+            .catch(error => console.log(error))
     }
 
     return (
         <div className='max-w-7xl mx-auto py-20 lg:py-28 h-fit'>
 
             <Fade direction='down' triggerOnce={true}>
-                <h1 className='text-center text-3xl md:text-4xl lg:text-5xl font-bold md:mb-7 mb-5'>Add   <span className='text-purple-400'>Tasks</span></h1>
+                <h1 className='text-center text-3xl md:text-4xl lg:text-5xl font-bold md:mb-7 mb-5'>Add   <span className='text-purple-400'>Items</span></h1>
             </Fade>
 
             <Fade direction='up' triggerOnce={true}>
@@ -78,7 +94,7 @@ const AddItems = () => {
                         {/* fieldset - 1 */}
                         <fieldset className="fieldset bg-base-200 rounded-box p-4">
 
-                            <label className="label">Deadline</label>
+                            <label className="label">Date</label>
 
                             <DatePicker className="input w-full" name='date'
                                 selected={selectedDate}
@@ -91,14 +107,14 @@ const AddItems = () => {
                         <fieldset className="fieldset bg-base-200 rounded-box p-4">
 
                             <label className="label">Email</label>
-                            <input type="email" name='email' className="input w-full" value={user.email} />
+                            <input type="email" name='email' className="input w-full" readOnly value={user.email} />
                         </fieldset>
 
                         {/* fieldset - 1 */}
                         <fieldset className="fieldset bg-base-200 rounded-box p-4">
 
                             <label className="label">Name</label>
-                            <input type="text" name='name' className="input w-full" value={user.displayName} />
+                            <input type="text" name='name' className="input w-full" readOnly value={user.displayName} />
                         </fieldset>
 
 
