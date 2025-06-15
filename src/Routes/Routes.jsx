@@ -25,7 +25,7 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        loader: () => fetch('http://localhost:3000/latestItems'),
+        loader: () => fetch('https://b11a11-whereisit-server-side.vercel.app/latestItems'),
         Component: Home,
         hydrateFallbackElement: <Loading />
       },
@@ -47,7 +47,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/myItems",
-        loader: () => fetch('http://localhost:3000/items'),
+        loader: () => fetch('https://b11a11-whereisit-server-side.vercel.app/items'),
         element: (
           <PrivateRoutes>
             <MyItems />
@@ -57,7 +57,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/allRecovered",
-        loader: () => fetch('http://localhost:3000/recoveredItems'),
+        loader: () => fetch('https://b11a11-whereisit-server-side.vercel.app/recoveredItems'),
         element: (
           <PrivateRoutes>
             <AllRecovered />
@@ -67,7 +67,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/items/:id",
-        loader: ({ params }) => fetch(`http://localhost:3000/items/${params.id}`),
+        loader: ({ params }) => fetch(`https://b11a11-whereisit-server-side.vercel.app/items/${params.id}`),
         element: (
           <PrivateRoutes>
             <PostDetails></PostDetails>
@@ -77,7 +77,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/allItems",
-        loader: () => fetch('http://localhost:3000/items'),
+        loader: () => fetch('https://b11a11-whereisit-server-side.vercel.app/items'),
         Component: LostFoundItems,
         hydrateFallbackElement: <Loading />
       },

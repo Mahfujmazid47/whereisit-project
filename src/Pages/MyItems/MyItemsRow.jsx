@@ -26,7 +26,7 @@ const MyItemsRow = ({ index, item, setMyItems, myItems }) => {
 
 
                 // deleting from db 
-                axios.delete(`http://localhost:3000/items/${id}`)
+                axios.delete(`https://b11a11-whereisit-server-side.vercel.app/items/${id}`)
                     .then(res => {
                         console.log(res.data)
 

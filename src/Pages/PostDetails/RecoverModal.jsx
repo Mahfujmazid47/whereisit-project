@@ -23,7 +23,7 @@ const RecoverModal = ({ item, setItemStatus }) => {
 
 
         // set status = 'recovered' in db 
-        axios.patch(`http://localhost:3000/items/${_id}`, { status: 'recovered' })
+        axios.patch(`https://b11a11-whereisit-server-side.vercel.app/items/${_id}`, { status: 'recovered' })
             .then(res => {
                 console.log(res.data);
                 if (res.data.modifiedCount) {
@@ -34,7 +34,7 @@ const RecoverModal = ({ item, setItemStatus }) => {
 
 
         // post all info to '/recoveredItems' API 
-        axios.post('http://localhost:3000/recoveredItems', recoveredItem)
+        axios.post('https://b11a11-whereisit-server-side.vercel.app/recoveredItems', recoveredItem)
             .then(res => {
                 console.log(res.data);
                 if (res.data.insertedId) {

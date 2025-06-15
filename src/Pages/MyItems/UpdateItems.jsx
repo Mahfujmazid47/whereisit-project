@@ -25,7 +25,7 @@ const UpdateItems = ({ item }) => {
         console.log(updatedItem);
 
         // send updated item to the DB 
-        axios.put(`http://localhost:3000/items/${_id}`,  updatedItem )
+        axios.put(`https://b11a11-whereisit-server-side.vercel.app/items/${_id}`,  updatedItem )
             .then(res => {
                 console.log(res.data);
                 if (res.data.modifiedCount) {
