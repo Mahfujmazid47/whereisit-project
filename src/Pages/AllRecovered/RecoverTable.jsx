@@ -6,7 +6,7 @@ const RecoverTable = ({recoveredItems}) => {
     return (
         <div>
             <Fade direction='right' triggerOnce={true}>
-                <div className="overflow-x-auto border-r border-l border-b border-base-300 shadow-sm">
+                <div className="overflow-x-auto border-r mt-5 border-l border-b border-base-300 shadow-sm">
                     <table className="table w-full min-w-[800px]">
                         {/* head */}
                         <thead>

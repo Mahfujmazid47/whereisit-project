@@ -41,11 +41,20 @@ const AllRecovered = () => {
                     </Fade>
                 </div>
 
-                <div>
-                    <button onClick={handleTableFormat}>
-                        {!tableFormat ? <GiHamburgerMenu size={24} /> : <TfiLayoutGrid3Alt size={20} />}
+                {/* Layout Toggle Button */}
+                <div className='mt-4 md:mt-0'>
+                    <button
+                        onClick={handleTableFormat}
+                        className="flex items-center gap-2 px-4 py-2 border border-purple-300 rounded-md text-sm text-purple-700 hover:bg-purple-100 cursor-pointer transition-all"
+                    >
+                        {tableFormat ? <TfiLayoutGrid3Alt size={18} /> : <GiHamburgerMenu size={20} />}
+                        <span>{tableFormat ? "Grid View" : "Table View"}</span>
                     </button>
                 </div>
+
+                {/* bg-purple-400 text-white md:px-4 transition-all hover:font-semibold hover:rounded hover:duration-300 hover:ease-in-out hover:transform hover:scale-105 active:scale-95 hover:shadow-lg */}
+
+
             </div>
 
             {/* Recovered Item Table  */}
@@ -55,11 +64,11 @@ const AllRecovered = () => {
                     <>
                         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-16 gap-5'>
                             {
-                            recoveredItems.map(item => <RecoverCard
-                                key={item._id}
-                                item={item}
-                            ></RecoverCard>)
-                        }
+                                recoveredItems.map(item => <RecoverCard
+                                    key={item._id}
+                                    item={item}
+                                ></RecoverCard>)
+                            }
                         </div>
                     </>
 
