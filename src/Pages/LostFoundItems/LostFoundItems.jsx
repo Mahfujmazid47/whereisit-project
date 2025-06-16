@@ -16,7 +16,9 @@ const LostFoundItems = () => {
         const searchedItems = allItems.filter(
             item =>
                 item.title.toLowerCase().split(' ').includes(text.toLowerCase()) ||
-                item.location.toLowerCase().split(' ').includes(text.toLowerCase())
+                item.location.toLowerCase().split(' ').includes(text.toLowerCase()) ||
+                item.location.toLowerCase().split(',').includes(text.toLowerCase()) ||
+                item.location.toLowerCase().includes(text.toLowerCase())
         );
 
 

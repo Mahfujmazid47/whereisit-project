@@ -13,6 +13,8 @@ This project is a Lost and Found Website, a platform designed to connect individ
 - npm install react-datepicker --save
 - npm install axios
 - npm i react-toastify
+- npm install react-awesome-reveal
+- npm install motion
 - 
 
 

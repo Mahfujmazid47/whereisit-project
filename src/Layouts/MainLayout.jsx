@@ -1,10 +1,13 @@
 import React, { Suspense } from 'react';
-import { Outlet } from 'react-router';
+import { Outlet, useLocation } from 'react-router';
 import Loading from '../Shared/Loading';
 import Navbar from '../Shared/Navbar';
 import Footer from '../Shared/Footer';
 
 const MainLayout = () => {
+
+    const {state} = useLocation();
+
     return (
         <>
             <nav>
@@ -12,7 +15,7 @@ const MainLayout = () => {
             </nav>
             <main>
                 <Suspense fallback={<Loading />}>
-                    <Outlet></Outlet>
+                    {state === 'loading' ? <Loading /> : <Outlet></Outlet>}
                 </Suspense>
             </main>
             <footer>

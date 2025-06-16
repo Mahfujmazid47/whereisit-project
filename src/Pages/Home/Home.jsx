@@ -10,8 +10,8 @@ const Home = () => {
 
     const items = useLoaderData();
     // console.log(items)
-    const location = useLocation();
-    console.log(location)
+    // const {state} = useLocation();
+    // console.log(location)
     // if (state == 'loading'){
     //     return <Loading />
     // }
