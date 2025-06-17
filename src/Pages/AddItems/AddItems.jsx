@@ -20,7 +20,7 @@ const AddItems = () => {
         const itemInfo = Object.fromEntries(formData.entries());
         // console.log(itemInfo)
 
-        axios.post('https://b11a11-whereisit-server-side.vercel.app/items', itemInfo)
+        axios.post('http://localhost:3000/items', itemInfo)
             .then(res => {
                 console.log(res.data);
                 if (res.data.insertedId) {

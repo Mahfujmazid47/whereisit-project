@@ -1,14 +1,14 @@
 import React from 'react';
-import { Fade } from 'react-awesome-reveal';
 import { Link } from 'react-router';
+import 'aos/dist/aos.css';
 
 const LostFoundItemsCard = ({ item }) => {
 
     const { _id, title, image, type, date, location } = item;
 
     return (
-        <Fade direction='up' triggerOnce={true}>
-            <div className="card bg-base-100 shadow-sm">
+        
+            <div data-aos="fade-up" className="card bg-base-100 shadow-sm">
                 <figure>
                     <img className='w-96 h-88 rounded-lg object-contain'
                         src={image}
@@ -26,7 +26,7 @@ const LostFoundItemsCard = ({ item }) => {
                     </div>
                 </div>
             </div>
-        </Fade>
+        
     );
 };
 

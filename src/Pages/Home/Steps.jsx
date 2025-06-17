@@ -1,21 +1,21 @@
 import React from 'react';
-import { Fade } from 'react-awesome-reveal';
 import { motion } from "motion/react"
+import 'aos/dist/aos.css';
 
 const Steps = () => {
     return (
          <div className='pb-24 md:pb-30'>
             <div className="px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-8 lg:py-20">
-                <Fade direction='up' triggerOnce={true}>
-                    <h1 className='text-center text-3xl md:text-4xl lg:text-5xl font-bold md:mb-12 mb-10'>
+                
+                    <h1 data-aos="fade-down" className='text-center text-3xl md:text-4xl lg:text-5xl font-bold md:mb-12 mb-10'>
                         How to <span className='text-purple-400'>Use</span> This Platform
                     </h1>
-                </Fade>
+                
 
                 <div className="grid gap-6 row-gap-10 lg:grid-cols-2">
                     {/* Left Section: Steps */}
-                    <Fade direction='left' triggerOnce={true}>
-                        <div className="lg:py-6 lg:pr-16">
+                    
+                        <div data-aos="fade-right" className="lg:py-6 lg:pr-16">
                             {/* Step 1 */}
                             <div className="flex mb-6">
                                 <div className="flex flex-col items-center mr-4">
@@ -95,11 +95,11 @@ const Steps = () => {
                                 </div>
                             </div>
                         </div>
-                    </Fade>
+                    
 
                     {/* Right Section: Image */}
-                    <Fade direction='right' triggerOnce={true}>
-                        <div>
+                    
+                        <div data-aos="fade-left">
                             <motion.img
                                 className="rounded md:w-8/12 mx-auto lg:w-full"
                                 src="https://img.freepik.com/free-vector/detective-woman-concept-illustration_114360-14822.jpg?ga=GA1.1.1819153903.1738087789&semt=ais_hybrid&w=740"
@@ -111,7 +111,7 @@ const Steps = () => {
                                 // className="max-w-[300px] md:h-full h-[200px]  lg:max-w-sm mx-auto rounded-xl"
                             />
                         </div>
-                    </Fade>
+                    
                 </div>
             </div>
         </div>

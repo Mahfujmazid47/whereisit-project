@@ -1,21 +1,30 @@
-import React from 'react';
-import { Fade } from 'react-awesome-reveal';
+import React, { useEffect } from 'react';
 import { motion } from "motion/react"
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Slider = () => {
+
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+    }, []);
+
     return (
         <div className="carousel w-full max-h-screen mb-24">
 
             <div id="slide1" className="carousel-item relative w-full overflow-hidden">
                 <div className='lg:p-26 md:p-14 py-8 space-y-0 md:space-y-0 md:flex justify-center items-center rounded-b-xl bg-purple-300'>
-                    <div className='overflow-hidden'>
-                        <Fade direction='left' triggerOnce={true}>
+                    <div data-aos="fade-right" className='overflow-hidden'>
+                        
                             <h1 className='text-center md:text-left text-3xl md:text-4xl font-bold lg:text-5xl lg:w-3/4 mb-2'><span className='text-purple-500'>Where</span>IsIt</h1>
                             <p className='text-base-400 text-sm text-center md:text-left md:text-base lg:w-3/4 mb-8 md:mb-0'>Reunite lost treasures and found items effortlessly – your community's dedicated lost and found platform for quick connections.</p>
-                        </Fade>
+                        
                     </div>
-                    <Fade direction='right' triggerOnce={true}>
-                        <div className=''>
+                    
+                        <div data-aos="fade-left">
                             <motion.img
                                 src="https://img.freepik.com/free-vector/detective-kids-concept-illustration_114360-14825.jpg?ga=GA1.1.1819153903.1738087789&semt=ais_items_boosted&w=740"
                                 animate={{ y: [10, 30, 10] }}
@@ -24,7 +33,7 @@ const Slider = () => {
                                 className="max-w-[300px] md:h-full h-[200px]  lg:max-w-sm mx-auto rounded-xl shadow-2xl"
                             />
                         </div>
-                    </Fade>
+                    
                 </div>
 
                 {/* <img className='w-6/12 md:w-8/12 mx-auto rounded-xl' src="https://img.freepik.com/free-vector/detective-kids-concept-illustration_114360-14825.jpg?ga=GA1.1.1819153903.1738087789&semt=ais_items_boosted&w=740" alt="" /> */}

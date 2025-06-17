@@ -3,6 +3,7 @@ import { useLoaderData } from 'react-router';
 import LostFoundItemsCard from '../../Shared/LostFoundItemsCard';
 import { Fade } from 'react-awesome-reveal';
 import NoSearchResult from './NoSearchResult';
+import 'aos/dist/aos.css';
 
 const LostFoundItems = () => {
     const allItems = useLoaderData();
@@ -36,29 +37,30 @@ const LostFoundItems = () => {
     return (
         <div className='max-w-7xl mx-auto my-14 md:my-20'>
 
-            <Fade direction='up' triggerOnce={true}>
-                <h1 className='text-center text-3xl md:text-4xl lg:text-5xl font-bold md:mb-14 mb-5'>All Lost &<span className='text-purple-400'> Find Items</span></h1>
-            </Fade>
 
-            <Fade direction='up' triggerOnce={true}>
-                <form onSubmit={(e) => {
-                    handleSearch(e, searchText)
-                }} className='flex items-center justify-center gap-0'>
-                    <input
-                        value={searchText}
-                        onChange={e => setSearchText(e.target.value)}
-                        type="text"
-                        placeholder="Search Your Item here"
-                        className="input w-1/2 rounded-l-full " />
+            <h1 data-aos="fade-up" className='text-center text-3xl md:text-4xl lg:text-5xl font-bold md:mb-14 mb-5'>All Lost &<span className='text-purple-400'> Find Items</span></h1>
 
-                    <input
-                        type="submit"
-                        value="Search"
-                        className='btn bg-purple-400 text-white md:px-4 transition-all hover:font-semibold hover:duration-300 hover:ease-in-out hover:transform hover:scale-105 active:scale-95 hover:shadow-lg rounded-r-full' />
-                </form>
-            </Fade>
 
-            <Fade direction='up' triggerOnce={true}>
+
+            <form data-aos="fade-up" onSubmit={(e) => {
+                handleSearch(e, searchText)
+            }} className='flex items-center justify-center gap-0'>
+                <input
+                    value={searchText}
+                    onChange={e => setSearchText(e.target.value)}
+                    type="text"
+                    placeholder="Search Your Item here"
+                    className="input w-1/2 rounded-l-full " />
+
+                <input
+                    type="submit"
+                    value="Search"
+                    className='btn bg-purple-400 text-white md:px-4 transition-all hover:font-semibold hover:duration-300 hover:ease-in-out hover:transform hover:scale-105 active:scale-95 hover:shadow-lg rounded-r-full' />
+            </form>
+
+
+
+            <div data-aos="fade-up">
                 <>
                     {
                         items.length < 1 && searchText !== "" ?
@@ -77,7 +79,8 @@ const LostFoundItems = () => {
                             </div>
                     }
                 </>
-            </Fade>
+            </div>
+
         </div>
     );
 };
