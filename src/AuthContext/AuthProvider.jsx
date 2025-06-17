@@ -38,6 +38,9 @@ const AuthProvider = ({ children }) => {
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
             setUser(currentUser);
+            // post request for jwt using user email
+            // api endpoint : /jwt (post method)
+            console.log(currentUser)
             setLoading(false);
         });
         return () => {

@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { use } from 'react';
 import { Fade } from 'react-awesome-reveal';
 import RecoverRow from './RecoverRow';
 
-const RecoverTable = ({recoveredItems}) => {
+const RecoverTable = ({recoveredItemsPromise}) => {
+    const recoveredItems =use(recoveredItemsPromise);
     return (
         <div>
             <Fade direction='right' triggerOnce={true}>

@@ -102,7 +102,7 @@ const MyItemsRow = ({ index, item, setMyItems, myItems }) => {
                             <div className="modal-action">
                                 {/* if there is a button in form, it will close the modal */}
                                 <form method="dialog">
-                                    <button class="btn rounded-full bg-purple-400 text-white btn-sm btn-circle btn-ghost absolute right-3 top-3">✕</button>
+                                    <button className="btn rounded-full bg-purple-400 text-white btn-sm btn-circle btn-ghost absolute right-3 top-3">✕</button>
                                 </form>
                             </div>
                         </div>

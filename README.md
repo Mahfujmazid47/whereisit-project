@@ -15,6 +15,7 @@ This project is a Lost and Found Website, a platform designed to connect individ
 - npm i react-toastify
 - npm install react-awesome-reveal
 - npm install motion
+- npm i firebase-admin
 - 
 
 

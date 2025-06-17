@@ -25,12 +25,16 @@ const UpdateItems = ({ item }) => {
         console.log(updatedItem);
 
         // send updated item to the DB 
-        axios.put(`https://b11a11-whereisit-server-side.vercel.app/items/${_id}`,  updatedItem )
+        axios.put(`https://b11a11-whereisit-server-side.vercel.app/items/${_id}?email=${user.email}`,  updatedItem ,{
+            headers: {
+                Authorization : `Bearer ${user.accessToken}`
+            }
+        } )
             .then(res => {
                 console.log(res.data);
                 if (res.data.modifiedCount) {
                     Swal.fire({
-                        position: "top-right",
+                        position: "center",
                         icon: "success",
                         title: "Item Updated Successfully",
                         showConfirmButton: false,

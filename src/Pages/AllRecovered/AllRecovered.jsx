@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
 import { Fade } from 'react-awesome-reveal';
 import { useLoaderData } from 'react-router';
 import useAuth from '../../Hooks/useAuth';
@@ -7,19 +7,22 @@ import RecoverTable from './RecoverTable';
 import { GiHamburgerMenu } from "react-icons/gi";
 import { TfiLayoutGrid3Alt } from "react-icons/tfi";
 import RecoverCard from './RecoverCard';
+import RecoverList from './RecoverList.jsx';
+import { recoveredItemsPromise } from '../../API/recoverItemsAPI.js';
+import Loading from '../../Shared/Loading.jsx';
 
 const AllRecovered = () => {
 
     const { user } = useAuth();
     const allRecoveredItems = useLoaderData();
-    console.log(allRecoveredItems)
+    // console.log(allRecoveredItems)
     const [recoveredItems, setRecoveredItems] = useState([]);
     const [tableFormat, setTableFormat] = useState(true);
 
     useEffect(() => {
         const refinedItems = allRecoveredItems.filter(item => user.email === item.email);
         setRecoveredItems(refinedItems);
-    }, [user, setRecoveredItems, allRecoveredItems]);
+    }, [user, allRecoveredItems]);
 
     const handleTableFormat = () => {
         setTableFormat(!tableFormat);
@@ -30,7 +33,7 @@ const AllRecovered = () => {
         return <EmptyRecoveredItems />
     };
 
-    console.log(recoveredItems)
+    // console.log(recoveredItems)
 
     return (
         <div className='max-w-7xl mx-auto py-20 lg:py-28 h-fit'>
@@ -52,31 +55,30 @@ const AllRecovered = () => {
                     </button>
                 </div>
 
-                {/* bg-purple-400 text-white md:px-4 transition-all hover:font-semibold hover:rounded hover:duration-300 hover:ease-in-out hover:transform hover:scale-105 active:scale-95 hover:shadow-lg */}
-
-
             </div>
 
-            {/* Recovered Item Table  */}
-            {
-                tableFormat ?
+            <div>
+                {
+                    tableFormat ?
 
-                    <>
-                        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-16 gap-5'>
-                            {
-                                recoveredItems.map(item => <RecoverCard
-                                    key={item._id}
-                                    item={item}
-                                ></RecoverCard>)
-                            }
-                        </div>
-                    </>
+                        <>
+                            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-16 gap-5'>
+                                <Suspense fallback={<Loading />}>
+                                    <RecoverList
+                                        recoveredItemsPromise={recoveredItemsPromise(user.email, user.accessToken)}
+                                    ></RecoverList>
+                                </Suspense>
+                            </div>
+                        </>
 
-                    :
-                    <RecoverTable
-                        recoveredItems={recoveredItems}
-                    ></RecoverTable>
-            }
+                        :
+                        <Suspense fallback={<Loading />}>
+                            <RecoverTable
+                                recoveredItemsPromise={recoveredItemsPromise(user.email, user.accessToken)}
+                            ></RecoverTable>
+                        </Suspense>
+                }
+            </div>
 
         </div>
     );

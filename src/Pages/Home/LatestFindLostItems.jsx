@@ -5,6 +5,7 @@ import { Fade } from 'react-awesome-reveal';
 import { Link } from 'react-router';
 
 const LatestFindLostItems = ({items}) => {
+    
 
     return (
         <div className='max-w-7xl mx-auto mb-14 md:mb-20'>
