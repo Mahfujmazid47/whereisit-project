@@ -101,7 +101,7 @@ const Register = () => {
 
                                 {/* Photo URL  */}
                                 <label className="label">Photo URL</label>
-                                <input type="text" name='photo' className="input mb-4" placeholder="Photo URL" required />
+                                <input type="url" name='photo' className="input mb-4" placeholder="Photo URL" required />
 
                                 {/* Email  */}
                                 <label className="label">Email</label>

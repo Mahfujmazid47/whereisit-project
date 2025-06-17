@@ -1,5 +1,6 @@
 import React from 'react';
 import { Fade } from 'react-awesome-reveal';
+import { motion } from "motion/react"
 
 const Steps = () => {
     return (
@@ -99,10 +100,15 @@ const Steps = () => {
                     {/* Right Section: Image */}
                     <Fade direction='right' triggerOnce={true}>
                         <div>
-                            <img
+                            <motion.img
                                 className="rounded md:w-8/12 mx-auto lg:w-full"
                                 src="https://img.freepik.com/free-vector/detective-woman-concept-illustration_114360-14822.jpg?ga=GA1.1.1819153903.1738087789&semt=ais_hybrid&w=740"
                                 alt="Lost and Found Steps"
+
+                                animate={{ y: [10, 30, 10] }}
+                                transition={{duration: 3, repeat: Infinity }}
+
+                                // className="max-w-[300px] md:h-full h-[200px]  lg:max-w-sm mx-auto rounded-xl"
                             />
                         </div>
                     </Fade>

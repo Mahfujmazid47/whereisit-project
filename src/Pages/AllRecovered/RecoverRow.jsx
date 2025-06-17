@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 
 const RecoverRow = ({ item,index }) => {
 
-    const { _id, title, image, category, email, recoveryLocation, recoveryDate } = item;
+    const { _id, title, image, category, recoveryEmail, recoveryLocation, recoveryDate } = item;
 
     return (
         <tr>
@@ -28,7 +28,7 @@ const RecoverRow = ({ item,index }) => {
 
             </td>
             <td>{recoveryDate}</td>
-            <td>{email}</td>
+            <td>{recoveryEmail}</td>
             <th>
 
                 <div className="join">

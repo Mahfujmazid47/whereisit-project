@@ -24,6 +24,8 @@ const Navbar = () => {
 
     const links = <>
         <NavLink className='p-2 btn border-none bg-white shadow-none hover:text-purple-400 hover:bg-white md:px-4 transition-all hover:font-semibold hover:rounded hover:duration-300 hover:ease-in-out hover:transform hover:scale-105 active:scale-95 hover:shadow-lg' to="/">Home</NavLink>
+
+        <NavLink className='p-2 btn border-none bg-white shadow-none hover:text-purple-400 hover:bg-white md:px-4 transition-all hover:font-semibold hover:rounded hover:duration-300 hover:ease-in-out hover:transform hover:scale-105 active:scale-95 hover:shadow-lg' to="/allItems">Lost & Found Items</NavLink>
     </>
 
     const links2 = <>

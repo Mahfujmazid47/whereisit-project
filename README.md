@@ -1,4 +1,5 @@
-# WhereIsIt (A Find and Lost items related website) 
+# Project Name : WhereIsIt (A Find and Lost items related website)
+## Purpose :- 
 This project is a Lost and Found Website, a platform designed to connect individuals who have lost personal belongings with those who may have found them. Users can report lost items, browse found items, and interact to recover their belongings. Developing this website provides practical experience in building full-stack applications, user authentication, file uploads, database management, and API integration
 
 ## Live Link :-
@@ -15,7 +16,6 @@ This project is a Lost and Found Website, a platform designed to connect individ
 - npm i react-toastify
 - npm install react-awesome-reveal
 - npm install motion
-- npm i firebase-admin
 - 
 
 

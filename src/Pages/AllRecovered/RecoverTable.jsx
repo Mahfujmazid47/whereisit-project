@@ -18,7 +18,7 @@ const RecoverTable = ({recoveredItemsPromise}) => {
                                 <th>Title</th>
                                 <th>Recovered Location</th>
                                 <th>Recovery Date</th>
-                                <th>Email</th>
+                                <th>Recovery Email</th>
                             </tr>
                         </thead>
                         <tbody>
