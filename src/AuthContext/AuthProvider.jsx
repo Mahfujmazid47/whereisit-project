@@ -40,7 +40,7 @@ const AuthProvider = ({ children }) => {
             setUser(currentUser);
             // post request for jwt using user email
             // api endpoint : /jwt (post method)
-            console.log(currentUser)
+            // console.log(currentUser)
             setLoading(false);
         });
         return () => {

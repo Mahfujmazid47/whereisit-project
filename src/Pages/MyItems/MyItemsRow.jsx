@@ -11,7 +11,7 @@ const MyItemsRow = ({ index, item, setMyItems, myItems }) => {
     const { _id, title, image, category, email, type, date } = item;
 
     const handleDelete = (id) => {
-        console.log(id);
+        // console.log(id);
 
         Swal.fire({
             title: "Are you sure?",
@@ -28,7 +28,7 @@ const MyItemsRow = ({ index, item, setMyItems, myItems }) => {
                 // deleting from db 
                 axios.delete(`https://b11a11-whereisit-server-side.vercel.app/items/${id}`)
                     .then(res => {
-                        console.log(res.data)
+                        // console.log(res.data)
 
                         if (res.data.deletedCount) {
                             const remainingItem = myItems.filter(item => item._id !== id);
@@ -44,7 +44,7 @@ const MyItemsRow = ({ index, item, setMyItems, myItems }) => {
 
                     })
                     .catch(error => {
-                        console.log(error);
+                        // console.log(error);
                         Swal.fire("Failed!", "Something went wrong.", "error");
                     })
 

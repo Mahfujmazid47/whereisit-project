@@ -20,9 +20,9 @@ const AddItems = () => {
         const itemInfo = Object.fromEntries(formData.entries());
         // console.log(itemInfo)
 
-        axios.post('http://localhost:3000/items', itemInfo)
+        axios.post('https://b11a11-whereisit-server-side.vercel.app/items', itemInfo)
             .then(res => {
-                console.log(res.data);
+                // console.log(res.data);
                 if (res.data.insertedId) {
                     Swal.fire({
                         position: "center",

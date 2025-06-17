@@ -10,6 +10,7 @@ import RecoverCard from './RecoverCard';
 import RecoverList from './RecoverList.jsx';
 import { recoveredItemsPromise } from '../../API/recoverItemsAPI.js';
 import Loading from '../../Shared/Loading.jsx';
+import 'aos/dist/aos.css';
 
 const AllRecovered = () => {
 
@@ -39,9 +40,9 @@ const AllRecovered = () => {
         <div className='max-w-7xl mx-auto py-20 lg:py-28 h-fit'>
             <div className=' md:flex items-center justify-between'>
                 <div>
-                    <Fade direction='left' triggerOnce={true}>
-                        <h1 className='text-center text-3xl md:text-4xl lg:text-5xl font-bold md:mb-7 mb-5'>All   <span className='text-purple-400'>Recovered Items</span></h1>
-                    </Fade>
+                    
+                        <h1 data-aos="fade-left" className='text-center text-3xl md:text-4xl lg:text-5xl font-bold md:mb-7 mb-5'>All   <span className='text-purple-400'>Recovered Items</span></h1>
+                    
                 </div>
 
                 {/* Layout Toggle Button */}

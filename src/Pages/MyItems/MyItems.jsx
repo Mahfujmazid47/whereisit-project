@@ -16,7 +16,7 @@ const MyItems = () => {
     const allItems = useLoaderData();
     const [myItems, setMyItems] = useState([]);
 
-    console.log('token in the user' , user.accessToken);
+    // console.log('token in the user' , user.accessToken);
     
 
     useEffect(() => {

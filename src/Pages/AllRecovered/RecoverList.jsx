@@ -3,7 +3,7 @@ import RecoverCard from './RecoverCard';
 
 const RecoverList = ({ recoveredItemsPromise }) => {
     const recoveredItems = use(recoveredItemsPromise);
-    console.log(recoveredItems)
+    // console.log(recoveredItems)
     return (
         <div>
             {

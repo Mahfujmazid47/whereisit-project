@@ -18,14 +18,14 @@ const RecoverModal = ({ item, setItemStatus }) => {
         const recoveredInfo = Object.fromEntries(formData.entries());
 
         const recoveredItem = { ...item, ...recoveredInfo, status: 'recovered' };
-        console.log(recoveredItem)
+        // console.log(recoveredItem)
 
 
 
         // set status = 'recovered' in db 
         axios.patch(`https://b11a11-whereisit-server-side.vercel.app/items/${_id}`, { status: 'recovered' })
             .then(res => {
-                console.log(res.data);
+                // console.log(res.data);
                 if (res.data.modifiedCount) {
                     setItemStatus('recovered');
                 }
@@ -36,7 +36,7 @@ const RecoverModal = ({ item, setItemStatus }) => {
         // post all info to '/recoveredItems' API 
         axios.post('https://b11a11-whereisit-server-side.vercel.app/recoveredItems', recoveredItem)
             .then(res => {
-                console.log(res.data);
+                // console.log(res.data);
                 if (res.data.insertedId) {
                     Swal.fire({
                         position: "center",

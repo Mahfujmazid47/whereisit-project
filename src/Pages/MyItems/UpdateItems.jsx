@@ -22,7 +22,7 @@ const UpdateItems = ({ item }) => {
         const formData = new FormData(form);
         const updatedItem = Object.fromEntries(formData.entries());
         // updatedItem.date = selectedDate;
-        console.log(updatedItem);
+        // console.log(updatedItem);
 
         // send updated item to the DB 
         axios.put(`https://b11a11-whereisit-server-side.vercel.app/items/${_id}?email=${user.email}`,  updatedItem ,{
@@ -31,7 +31,7 @@ const UpdateItems = ({ item }) => {
             }
         } )
             .then(res => {
-                console.log(res.data);
+                // console.log(res.data);
                 if (res.data.modifiedCount) {
                     Swal.fire({
                         position: "center",
@@ -44,7 +44,7 @@ const UpdateItems = ({ item }) => {
                 }
             })
             .catch(error => {
-                console.log(error)
+                // console.log(error)
             })
     }
 
