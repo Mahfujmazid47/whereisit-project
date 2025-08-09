@@ -5,6 +5,7 @@ import { useLoaderData } from 'react-router';
 import Steps from './Steps';
 import Stats from './Stats';
 import Loading from '../../Shared/Loading';
+import Newsletter from './Newsletter';
 
 const Home = () => {
 
@@ -37,6 +38,10 @@ const Home = () => {
 
             <section>
                 <Stats></Stats>
+            </section>
+
+            <section>
+                <Newsletter></Newsletter>
             </section>
         </div>
     );

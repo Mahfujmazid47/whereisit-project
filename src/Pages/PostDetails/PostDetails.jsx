@@ -18,14 +18,14 @@ const PostDetails = () => {
 
     return (
         <div className="max-w-7xl mx-auto my-14 md:my-20 px-4">
-            <Fade direction="up" triggerOnce={true}>
-                <h1 className="text-center text-3xl md:text-4xl lg:text-5xl font-bold md:my-14 my-5">
+            
+                <h1 data-aos="fade-up" className="text-center text-3xl md:text-4xl lg:text-5xl font-bold md:my-14 my-5">
                     Post <span className="text-purple-400">Details</span>
                 </h1>
-            </Fade>
+            
 
-            <Fade direction="up" triggerOnce={true}>
-                <div className="card lg:card-side bg-base-100 shadow-md rounded-lg overflow-hidden">
+            
+                <div data-aos="fade-up"  className="card lg:card-side bg-base-100 shadow-md rounded-lg overflow-hidden">
                     <figure className="md:w-5/12 lg:w-[30%] m-auto object-contain">
                         <img
                             className=""
@@ -124,7 +124,7 @@ const PostDetails = () => {
                         </div>
                     </div>
                 </div>
-            </Fade>
+         
         </div>
     );
 };

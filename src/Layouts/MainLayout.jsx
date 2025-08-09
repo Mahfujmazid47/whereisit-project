@@ -14,7 +14,7 @@ const MainLayout = () => {
             <nav>
                 <Navbar></Navbar>
             </nav>
-            <main>
+            <main className='mt-15'>
                 <Suspense fallback={<Loading />}>
                     {navigation.state === 'loading' ? <Loading /> : <Outlet></Outlet>}
                 </Suspense>
