@@ -17,7 +17,7 @@ This project is a Lost and Found Website, a platform designed to connect individ
 - npm install react-awesome-reveal
 - npm install motion
 - npm install aos --save
-- 
+- npm install react-slick slick-carousel
 
 
 ## Expanding the ESLint configuration
