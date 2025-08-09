@@ -12,3 +12,7 @@ body {
 a.active{
   @apply btn bg-purple-400 text-white transition-all duration-300 ease-in-out transform hover:scale-105 active:scale-95 hover:shadow-lg
 }
+
+/* slick-carousel default styles */
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
