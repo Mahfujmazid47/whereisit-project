@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import { Fade } from 'react-awesome-reveal';
 import { useLoaderData } from 'react-router';
 import RecoverModal from './RecoverModal';
+import useAuth from '../../Hooks/useAuth';
 
 const PostDetails = () => {
+    const {user} = useAuth();
     const item = useLoaderData();
     // console.log(item)
     const { _id, title, image, type, date, location, description, email, name, category, status } = item;
@@ -81,10 +83,14 @@ const PostDetails = () => {
                                     :
 
                                     <div>
-                                        <button className="btn mt-4 bg-purple-400 text-white md:px-4 transition-all hover:font-semibold hover:rounded hover:duration-300 hover:ease-in-out hover:transform hover:scale-105 active:scale-95 hover:shadow-lg" onClick={() => handleModal(_id)}>
-                                            {
-                                                type == 'Lost' ? 'Found This!' : 'This is Mine!'
-                                            }
+                                        <button
+                                        disabled={!user}
+                                         className="btn mt-4 bg-purple-400 text-white md:px-4 transition-all hover:font-semibold hover:rounded hover:duration-300 hover:ease-in-out hover:transform hover:scale-105 active:scale-95 hover:shadow-lg" onClick={() => handleModal(_id)}>
+                                            {user
+                                                ? type === 'Lost'
+                                                    ? 'Found This!'
+                                                    : 'This is Mine!'
+                                                : 'Login to recover'}
                                         </button>
 
                                         <dialog id={`my_modal_${_id}`} className="modal modal-bottom sm:modal-middle">
@@ -97,8 +103,8 @@ const PostDetails = () => {
                                                 ></UpdateItems> */}
 
                                                 <RecoverModal
-                                                item={item}
-                                                setItemStatus={setItemStatus}
+                                                    item={item}
+                                                    setItemStatus={setItemStatus}
                                                 ></RecoverModal>
 
                                                 <div className="modal-action">

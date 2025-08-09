@@ -16,6 +16,7 @@ import ContactDetails from "../Pages/ContactDetails/ContactDetails";
 import TermsConditions from "../Pages/TermsConditions/TermsConditions";
 import UpdateItems from "../Pages/MyItems/UpdateItems";
 import Loading from "../Shared/Loading";
+import AboutUs from "../Shared/AboutUs";
 
 
 export const router = createBrowserRouter([
@@ -69,9 +70,9 @@ export const router = createBrowserRouter([
         path: "/items/:id",
         loader: ({ params }) => fetch(`https://b11a11-whereisit-server-side.vercel.app/items/${params.id}`),
         element: (
-          <PrivateRoutes>
+          
             <PostDetails></PostDetails>
-          </PrivateRoutes>
+          
         ),
         hydrateFallbackElement: <Loading />
       },
@@ -88,6 +89,10 @@ export const router = createBrowserRouter([
       {
         path: '/terms',
         Component: TermsConditions
+      },
+      {
+        path: '/aboutUs',
+        Component: AboutUs
       },
     ]
   },

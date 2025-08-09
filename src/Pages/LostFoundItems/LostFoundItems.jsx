@@ -3,7 +3,6 @@ import { useLoaderData } from 'react-router';
 import LostFoundItemsCard from '../../Shared/LostFoundItemsCard';
 import { Fade } from 'react-awesome-reveal';
 import NoSearchResult from './NoSearchResult';
-import 'aos/dist/aos.css';
 
 const LostFoundItems = () => {
     const allItems = useLoaderData();

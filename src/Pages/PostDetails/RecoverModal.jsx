@@ -91,63 +91,19 @@ const RecoverModal = ({ item, setItemStatus }) => {
                     </fieldset>
 
 
-                    {/* fieldset - 1 */}
-                    {/* <fieldset className="fieldset bg-base-200 rounded-box px-3 py-1">
-
-                        <label className="label">Thumbnail</label>
-                        <input defaultValue={image} type="url" name='image' className="input w-full rounded" placeholder="Enter Image URL" />
-                    </fieldset> */}
-
-                    {/* fieldset - 1 */}
-                    {/* <fieldset className="fieldset bg-base-200 rounded-box px-3 py-1">
-
-                        <label className="label">Title</label>
-                        <input type="text" defaultValue={title} name='title' className="input w-full rounded" placeholder="Enter Title" />
-                    </fieldset> */}
-                    {/* fieldset - 2 */}
-                    {/* <fieldset className="fieldset bg-base-200 rounded-box px-3 py-1">
-
-                        <label className="label">Category</label>
-                        <select defaultValue={category} className="select w-full rounded" name='category' >
-                            <option value="" disabled >Pick a Category</option>
-                            <option value="Pets">Pets</option>
-                            <option value="Document">Document</option>
-                            <option value="Gadgets">Gadgets</option>
-                            <option value="Others">Others</option>
-                        </select>
-                    </fieldset> */}
-
-                    {/* fieldset - 1 */}
-                    {/* <fieldset className="fieldset bg-base-200 rounded-box px-3 py-1">
-
-                        <label className="label">Location</label>
-                        <input type="text" defaultValue={location} name='location' className="input w-full rounded" placeholder="where the item was lost or found" />
-                    </fieldset> */}
-
-                    {/* fieldset - 1 */}
-                    {/* <fieldset className="fieldset bg-base-200 rounded-box px-3 py-1">
-
-                        <label className="label">Date</label>
-
-                        <DatePicker className="input w-full rounded" name='date'
-                            selected={selectedDate}
-                            onChange={(date) => setSelectedDate(date)}
-                        />
-
-                    </fieldset> */}
 
                     {/* fieldset - 1 */}
                     <fieldset className="fieldset bg-base-200 rounded-box px-3 py-1">
 
                         <label className="label">Recovered person's Email</label>
-                        <input type="email" name='recoveryEmail' className="input w-full rounded" readOnly value={user.email} />
+                        <input type="email" name='recoveryEmail' className="input w-full rounded" readOnly value={user?.email || ""} />
                     </fieldset>
 
                     {/* fieldset - 1 */}
                     <fieldset className="fieldset bg-base-200 rounded-box px-3 py-1">
 
                         <label className="label">Recovered person's Name</label>
-                        <input type="text" name='recoveryName' className="input w-full rounded" readOnly value={user.displayName} />
+                        <input type="text" name='recoveryName' className="input w-full rounded" readOnly  value={user?.displayName || ""} />
                     </fieldset>
 
 
@@ -157,7 +113,7 @@ const RecoverModal = ({ item, setItemStatus }) => {
                 <fieldset className="fieldset w-full rounded bg-base-200 rounded-box px-3 pt-3 pb-7">
 
                     <label className="label">Recovered person's Image URL</label>
-                    <input type="text" readOnly value={user.photoURL} name='recoveryPhotoURL' className="input w-full rounded" placeholder="Enter Description about Items" />
+                    <input type="text" readOnly value={user?.photoURL || ""} name='recoveryPhotoURL' className="input w-full rounded" placeholder="Enter Description about Items" />
                 </fieldset>
 
 

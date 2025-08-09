@@ -26,6 +26,12 @@ const Navbar = () => {
         <NavLink className='p-2 btn border-none bg-white shadow-none hover:text-purple-400 hover:bg-white md:px-4 transition-all hover:font-semibold hover:rounded hover:duration-300 hover:ease-in-out hover:transform hover:scale-105 active:scale-95 hover:shadow-lg' to="/">Home</NavLink>
 
         <NavLink className='p-2 btn border-none bg-white shadow-none hover:text-purple-400 hover:bg-white md:px-4 transition-all hover:font-semibold hover:rounded hover:duration-300 hover:ease-in-out hover:transform hover:scale-105 active:scale-95 hover:shadow-lg' to="/allItems">Lost & Found Items</NavLink>
+
+        <NavLink className='p-2 btn border-none bg-white shadow-none hover:text-purple-400 hover:bg-white md:px-4 transition-all hover:font-semibold hover:rounded hover:duration-300 hover:ease-in-out hover:transform hover:scale-105 active:scale-95 hover:shadow-lg' to="/contactDetails">Contact details</NavLink>
+
+        <NavLink className='p-2 btn border-none bg-white shadow-none hover:text-purple-400 hover:bg-white md:px-4 transition-all hover:font-semibold hover:rounded hover:duration-300 hover:ease-in-out hover:transform hover:scale-105 active:scale-95 hover:shadow-lg' to="/aboutUs">About us</NavLink>
+
+        <NavLink className='p-2 btn border-none bg-white shadow-none hover:text-purple-400 hover:bg-white md:px-4 transition-all hover:font-semibold hover:rounded hover:duration-300 hover:ease-in-out hover:transform hover:scale-105 active:scale-95 hover:shadow-lg' to="/terms">Terms & Conditions</NavLink>
     </>
 
     const links2 = <>
@@ -37,8 +43,8 @@ const Navbar = () => {
     </>
 
     return (
-        <div>
-            <div className="navbar bg-base-100 shadow-sm">
+        <div className=' w-[89%] mx-auto'>
+            <div className="navbar bg-base-100">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
