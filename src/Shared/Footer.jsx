@@ -10,7 +10,7 @@ const Footer = () => {
     </>
 
     return (
-        <footer className="footer footer-horizontal footer-center bg-purple-400 text-primary-content p-10">
+        <footer className="footer footer-horizontal footer-center bg-gradient-to-r from-purple-300 to-purple-500 text-primary-content p-10">
             <aside>
              
 

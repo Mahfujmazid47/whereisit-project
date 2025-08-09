@@ -49,7 +49,7 @@ const Reviews = () => {
   };
 
   return (
-    <section className="py-12 px-6 md:px-20  mt-12">
+    <section data-aos="fade-up" className="py-12 px-6 md:px-20  mt-12">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-purple-500 mb-6">
           What  <span className="text-gray-800">People Say</span>

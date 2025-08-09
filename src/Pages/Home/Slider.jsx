@@ -16,7 +16,7 @@ const Slider = () => {
         <div className="carousel w-full max-h-screen mb-24">
 
             <div id="slide1" className="carousel-item relative w-full overflow-hidden">
-                <div className='lg:p-26 md:p-14 py-8 space-y-0 md:space-y-0 md:flex justify-center items-center rounded-b-xl bg-purple-300'>
+                <div className='lg:p-26 md:p-14 py-8 space-y-0 md:space-y-0 md:flex justify-center items-center rounded-b-xl bg-gradient-to-r from-purple-200 to-purple-400'>
                     <div data-aos="fade-right" className='overflow-hidden'>
                         
                             <h1 className='text-center md:text-left text-3xl md:text-4xl font-bold lg:text-5xl lg:w-3/4 mb-2'><span className='text-purple-500'>Where</span>IsIt</h1>
@@ -26,11 +26,11 @@ const Slider = () => {
                     
                         <div data-aos="fade-left">
                             <motion.img
-                                src="https://img.freepik.com/free-vector/detective-kids-concept-illustration_114360-14825.jpg?ga=GA1.1.1819153903.1738087789&semt=ais_items_boosted&w=740"
+                                src="https://i.ibb.co.com/rWKXsGR/detective-kids-concept-illustration-114360-14825-removebg-preview.png"
                                 animate={{ y: [10, 30, 10] }}
                                 transition={{duration: 3, repeat: Infinity }}
 
-                                className="max-w-[300px] md:h-full h-[200px]  lg:max-w-sm mx-auto rounded-xl shadow-2xl"
+                                className="max-w-[400px] md:h-full h-[200px]  lg:max-w-sm mx-auto rounded-xl"
                             />
                         </div>
                     
@@ -45,7 +45,7 @@ const Slider = () => {
             </div>
 
             <div id="slide2" className="carousel-item relative w-full">
-                <div className='lg:p-26 md:p-14 py-8 space-y-5 md:space-y-0 md:flex justify-center items-center rounded-b-xl bg-red-300'>
+                <div className='lg:p-26 md:p-14 py-8 space-y-5 md:space-y-0 md:flex justify-center items-center rounded-b-xl bg-gradient-to-r from-red-200 to-red-400 '>
                     <div>
                         <h1 className='text-center md:text-left text-3xl md:text-4xl font-bold lg:text-5xl mb-2'>Report  <span className='text-red-500'>Lost Items</span></h1>
                         <p className='text-base-400 text-sm text-center md:text-left md:text-base mb-8 md:mb-0'>Quickly report lost items by providing key details, increasing the chances of your cherished belongings being returned by finders.</p>
@@ -69,7 +69,7 @@ const Slider = () => {
             </div>
 
             <div id="slide3" className="carousel-item relative w-full">
-                <div className='lg:p-26 md:p-14 py-8 space-y-5 md:space-y-0 md:flex justify-center items-center rounded-b-xl bg-sky-300'>
+                <div className='lg:p-26 md:p-14 py-8 space-y-5 md:space-y-0 md:flex justify-center items-center rounded-b-xl bg-gradient-to-r from-sky-200 to-sky-400'>
                     <div>
                         <h1 className='text-center md:text-left text-3xl md:text-4xl font-bold lg:text-5xl mb-2'>Browse  <span className='text-sky-500'>Found Items</span></h1>
                         <p className='text-base-400 text-sm text-center md:text-left md:text-base mb-8 md:mb-0'>Explore our Browse Found Items section to quickly view recently submitted belongings and hopefully reunite with your lost possessions.</p>
@@ -92,7 +92,7 @@ const Slider = () => {
             </div>
 
             <div id="slide4" className="carousel-item relative w-full">
-                <div className='lg:p-26 md:p-14 py-8 space-y-5 md:space-y-0 md:flex justify-center items-center rounded-b-xl bg-green-400'>
+                <div className='lg:p-26 md:p-14 py-8 space-y-5 md:space-y-0 md:flex justify-center items-center rounded-b-xl bg-gradient-to-r from-green-200 to-green-400'>
                     <div>
                         <h1 className='text-center md:text-left text-3xl md:text-4xl font-bold lg:text-5xl mb-2'>Interact <span className='text-green-600'>to Recover </span></h1>
                         <p className='text-base-400 text-sm text-center md:text-left md:text-base mb-8 md:mb-0'>Engage directly with finders and owners through our platform to securely coordinate the successful recovery of your lost possessions.</p>
