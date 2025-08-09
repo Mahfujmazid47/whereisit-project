@@ -34,10 +34,10 @@ const LostFoundItems = () => {
 
 
     return (
-        <div className='max-w-7xl mx-auto my-14 md:my-20'>
+        <div className='max-w-7xl mx-auto py-14 md:py-20'>
 
 
-            <h1 data-aos="fade-up" className='text-center text-3xl md:text-4xl lg:text-5xl font-bold md:mb-14 mb-5'>All Lost &<span className='text-purple-400'> Find Items</span></h1>
+            <h1 data-aos="fade-up" className='text-center text-3xl md:text-4xl font-bold md:mb-14 mb-5'>All Lost &<span className='text-purple-400'> Find Items</span></h1>
 
 
 
@@ -68,7 +68,7 @@ const LostFoundItems = () => {
                                 <NoSearchResult searchTerm={searchText} />
                             </Fade>
                             :
-                            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-16 gap-5'>
+                            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 my-16 gap-5'>
                                 {
                                     items.map(item => <LostFoundItemsCard
                                         key={item._id}

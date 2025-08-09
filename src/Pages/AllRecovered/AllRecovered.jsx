@@ -41,7 +41,7 @@ const AllRecovered = () => {
             <div className=' md:flex items-center justify-between'>
                 <div>
                     
-                        <h1 data-aos="fade-left" className='text-center text-3xl md:text-4xl lg:text-5xl font-bold md:mb-7 mb-5'>All   <span className='text-purple-400'>Recovered Items</span></h1>
+                        <h1 data-aos="fade-left" className='text-center text-3xl md:text-4xl font-bold md:mb-7 mb-5'>All   <span className='text-purple-400'>Recovered Items</span></h1>
                     
                 </div>
 

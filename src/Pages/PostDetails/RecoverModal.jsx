@@ -54,7 +54,7 @@ const RecoverModal = ({ item, setItemStatus }) => {
     return (
         <div>
             <div>
-                <h1 className='text-center text-3xl md:text-4xl lg:text-5xl font-bold md:mb-7 mb-5'>Recovered  <span className='text-purple-400'>Info</span></h1>
+                <h1 className='text-center text-3xl md:text-4xl font-bold md:mb-7 mb-5'>Recovered  <span className='text-purple-400'>Info</span></h1>
             </div>
 
             <form onSubmit={handleRecover} className='bg-base-200 py-3 rounded'>

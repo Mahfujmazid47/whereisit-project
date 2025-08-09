@@ -11,10 +11,10 @@ const MainLayout = () => {
 
     return (
         <>
-            <nav>
+            <nav className='bg-gradient-to-r  from-purple-50 to-purple-100'>
                 <Navbar></Navbar>
             </nav>
-            <main className='mt-15'>
+            <main className='bg-gradient-to-r  from-purple-50 to-purple-100'>
                 <Suspense fallback={<Loading />}>
                     {navigation.state === 'loading' ? <Loading /> : <Outlet></Outlet>}
                 </Suspense>

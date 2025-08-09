@@ -19,7 +19,7 @@ const PostDetails = () => {
     return (
         <div className="max-w-7xl mx-auto my-14 md:my-20 px-4">
             
-                <h1 data-aos="fade-up" className="text-center text-3xl md:text-4xl lg:text-5xl font-bold md:my-14 my-5">
+                <h1 data-aos="fade-up" className="text-center text-3xl md:text-4xl font-bold md:my-14 my-5">
                     Post <span className="text-purple-400">Details</span>
                 </h1>
             

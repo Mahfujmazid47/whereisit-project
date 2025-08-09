@@ -7,8 +7,8 @@ const Steps = () => {
          <div className='pb-24 md:pb-30'>
             <div className="px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-8 lg:py-20">
                 
-                    <h1 data-aos="fade-down" className='text-center text-3xl md:text-4xl lg:text-5xl font-bold md:mb-12 mb-10'>
-                        How to <span className='text-purple-400'>Use</span> This Platform
+                    <h1 data-aos="fade-down" className='text-center text-3xl md:text-4xl font-bold md:mb-12 mb-10'>
+                         <span className='text-purple-400'>How to Use</span> This Platform
                     </h1>
                 
 
@@ -101,8 +101,8 @@ const Steps = () => {
                     
                         <div data-aos="fade-left">
                             <motion.img
-                                className="rounded md:w-8/12 mx-auto lg:w-full"
-                                src="https://img.freepik.com/free-vector/detective-woman-concept-illustration_114360-14822.jpg?ga=GA1.1.1819153903.1738087789&semt=ais_hybrid&w=740"
+                                className="rounded md:w-8/12 mx-auto lg:w-10/12"
+                                src="https://i.ibb.co.com/Kp1hJrMJ/detective-woman-concept-illustration-114360-14822-removebg-preview.png"
                                 alt="Lost and Found Steps"
 
                                 animate={{ y: [10, 30, 10] }}

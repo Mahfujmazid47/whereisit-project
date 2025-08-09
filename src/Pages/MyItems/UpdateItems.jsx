@@ -52,7 +52,7 @@ const UpdateItems = ({ item }) => {
         <div className='max-w-7xl mx-auto py-5 lg:py-3 h-fit'>
 
             <Fade direction='down' triggerOnce={true}>
-                <h1 className='text-center text-3xl md:text-4xl lg:text-5xl font-bold md:mb-7 mb-5'>Update  <span className='text-purple-400'>Items</span></h1>
+                <h1 className='text-center text-3xl md:text-4xl font-bold md:mb-7 mb-5'>Update  <span className='text-purple-400'>Items</span></h1>
             </Fade>
 
             <Fade direction='up' triggerOnce={true}>

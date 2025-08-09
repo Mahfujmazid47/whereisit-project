@@ -33,7 +33,7 @@ const MyItems = () => {
     return (
         <div className='max-w-7xl mx-auto my-14 md:my-20'>
             <Fade direction='left' triggerOnce={true}>
-                <h1 className='text-center text-3xl md:text-4xl lg:text-5xl font-bold md:my-14 my-5'>Manage <span className='text-purple-400'>My Items</span></h1>
+                <h1 className='text-center text-3xl md:text-4xl font-bold md:my-14 my-5'>Manage <span className='text-purple-400'>My Items</span></h1>
             </Fade>
 
             <Suspense fallback={<Loading />}>

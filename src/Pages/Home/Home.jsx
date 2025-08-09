@@ -6,6 +6,7 @@ import Steps from './Steps';
 import Stats from './Stats';
 import Loading from '../../Shared/Loading';
 import Newsletter from './Newsletter';
+import Reviews from './Reviews';
 
 const Home = () => {
 
@@ -38,6 +39,10 @@ const Home = () => {
 
             <section>
                 <Stats></Stats>
+            </section>
+
+            <section>
+                <Reviews></Reviews>
             </section>
 
             <section>

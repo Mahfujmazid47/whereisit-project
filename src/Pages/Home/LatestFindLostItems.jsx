@@ -11,7 +11,7 @@ const LatestFindLostItems = ({items}) => {
         <div className='max-w-7xl mx-auto mb-14 md:mb-20'>
 
             
-                <h1 data-aos="fade-up" className='text-center text-3xl md:text-4xl lg:text-5xl font-bold md:mb-14 mb-5'>Latest Find <span className='text-purple-400'>& Lost Items</span></h1>
+                <h1 data-aos="fade-up" className='text-center text-3xl md:text-4xl font-bold md:mb-14 mb-5'> <span className='text-purple-400'>Latest Find </span>& Lost Items</h1>
             
 
             

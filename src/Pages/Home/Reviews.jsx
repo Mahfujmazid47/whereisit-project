@@ -1,5 +1,7 @@
 import React from 'react';
-import Slider from 'react-slick';
+import Slider from 'react-slick';/* slick-carousel default styles */
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 
 const Reviews = () => {
@@ -47,10 +49,10 @@ const Reviews = () => {
   };
 
   return (
-    <section className="py-12 px-6 md:px-20 bg-gradient-to-r from-purple-50 to-purple-100 mt-12">
+    <section className="py-12 px-6 md:px-20  mt-12">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-purple-600 mb-6">
-          What People Say
+        <h2 className="text-3xl md:text-4xl font-bold text-purple-500 mb-6">
+          What  <span className="text-gray-800">People Say</span>
         </h2>
         <p className="text-gray-600 mb-10 max-w-2xl mx-auto">
           Hear from people who have used <span className="font-semibold text-purple-500">WhereIsIt</span>  

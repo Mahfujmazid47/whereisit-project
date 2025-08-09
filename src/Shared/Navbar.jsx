@@ -23,28 +23,28 @@ const Navbar = () => {
     }
 
     const links = <>
-        <NavLink className='p-2 btn border-none bg-white shadow-none hover:text-purple-400 hover:bg-white md:px-4 transition-all hover:font-semibold hover:rounded hover:duration-300 hover:ease-in-out hover:transform hover:scale-105 active:scale-95 hover:shadow-lg' to="/">Home</NavLink>
+        <NavLink className='p-2 font-semibold border-none  shadow-none hover:text-purple-400 hover: md:px-4 transition-all hover:font-semibold hover:rounded hover:duration-300 hover:ease-in-out hover:transform hover:scale-105 active:scale-95 hover:shadow-lg' to="/">Home</NavLink>
 
-        <NavLink className='p-2 btn border-none bg-white shadow-none hover:text-purple-400 hover:bg-white md:px-4 transition-all hover:font-semibold hover:rounded hover:duration-300 hover:ease-in-out hover:transform hover:scale-105 active:scale-95 hover:shadow-lg' to="/allItems">Lost & Found Items</NavLink>
+        <NavLink className='p-2 font-semibold border-none  shadow-none hover:text-purple-400 hover: md:px-4 transition-all hover:font-semibold hover:rounded hover:duration-300 hover:ease-in-out hover:transform hover:scale-105 active:scale-95 hover:shadow-lg' to="/allItems">Lost & Found Items</NavLink>
 
-        <NavLink className='p-2 btn border-none bg-white shadow-none hover:text-purple-400 hover:bg-white md:px-4 transition-all hover:font-semibold hover:rounded hover:duration-300 hover:ease-in-out hover:transform hover:scale-105 active:scale-95 hover:shadow-lg' to="/contactDetails">Contact details</NavLink>
+        <NavLink className='p-2 font-semibold border-none  shadow-none hover:text-purple-400 hover: md:px-4 transition-all hover:font-semibold hover:rounded hover:duration-300 hover:ease-in-out hover:transform hover:scale-105 active:scale-95 hover:shadow-lg' to="/contactDetails">Contact details</NavLink>
 
-        <NavLink className='p-2 btn border-none bg-white shadow-none hover:text-purple-400 hover:bg-white md:px-4 transition-all hover:font-semibold hover:rounded hover:duration-300 hover:ease-in-out hover:transform hover:scale-105 active:scale-95 hover:shadow-lg' to="/aboutUs">About us</NavLink>
+        <NavLink className='p-2 font-semibold border-none  shadow-none hover:text-purple-400 hover: md:px-4 transition-all hover:font-semibold hover:rounded hover:duration-300 hover:ease-in-out hover:transform hover:scale-105 active:scale-95 hover:shadow-lg' to="/aboutUs">About us</NavLink>
 
-        <NavLink className='p-2 btn border-none bg-white shadow-none hover:text-purple-400 hover:bg-white md:px-4 transition-all hover:font-semibold hover:rounded hover:duration-300 hover:ease-in-out hover:transform hover:scale-105 active:scale-95 hover:shadow-lg' to="/terms">Terms & Conditions</NavLink>
+        <NavLink className='p-2 font-semibold border-none  shadow-none hover:text-purple-400 hover: md:px-4 transition-all hover:font-semibold hover:rounded hover:duration-300 hover:ease-in-out hover:transform hover:scale-105 active:scale-95 hover:shadow-lg' to="/terms">Terms & Conditions</NavLink>
     </>
 
     const links2 = <>
-        <NavLink className='p-2 mb-1 btn hover:text-white hover:bg-purple-400 md:px-4 border-2 border-purple-400 transition-all hover:font-semibold rounded hover:duration-300 hover:ease-in-out hover:transform hover:scale-105 active:scale-95 hover:shadow-lg' to="/addItems">Add Lost & Found Item</NavLink>
+        <NavLink className='p-2 mb-1 font-semibold hover:text-white hover:bg-purple-400 md:px-4 border-2 border-purple-400 transition-all hover:font-semibold rounded hover:duration-300 hover:ease-in-out hover:transform hover:scale-105 active:scale-95 hover:shadow-lg' to="/addItems">Add Lost & Found Item</NavLink>
 
-        <NavLink className='p-2 mb-1 btn hover:text-white hover:bg-purple-400 md:px-4 border-2 border-purple-400 transition-all hover:font-semibold rounded hover:duration-300 hover:ease-in-out hover:transform hover:scale-105 active:scale-95 hover:shadow-lg' to="/allRecovered">All Recovered Items</NavLink>
+        <NavLink className='p-2 mb-1 font-semibold hover:text-white hover:bg-purple-400 md:px-4 border-2 border-purple-400 transition-all hover:font-semibold rounded hover:duration-300 hover:ease-in-out hover:transform hover:scale-105 active:scale-95 hover:shadow-lg' to="/allRecovered">All Recovered Items</NavLink>
 
-        <NavLink className='p-2 btn hover:text-white hover:bg-purple-400 md:px-4 border-2 border-purple-400 transition-all hover:font-semibold rounded hover:duration-300 hover:ease-in-out hover:transform hover:scale-105 active:scale-95 hover:shadow-lg' to="/myItems">Manage My Items</NavLink>
+        <NavLink className='p-2 font-semibold hover:text-white hover:bg-purple-400 md:px-4 border-2 border-purple-400 transition-all hover:font-semibold rounded hover:duration-300 hover:ease-in-out hover:transform hover:scale-105 active:scale-95 hover:shadow-lg' to="/myItems">Manage My Items</NavLink>
     </>
 
     return (
-        <div className='lg:px-20'>
-            <div className="navbar bg-base-100">
+        <div className='lg:px-20 '>
+            <div className="navbar bg-gradient-to-r  from-purple-50 to-purple-100">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
