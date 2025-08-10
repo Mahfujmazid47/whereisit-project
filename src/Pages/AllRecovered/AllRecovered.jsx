@@ -63,7 +63,7 @@ const AllRecovered = () => {
                     tableFormat ?
 
                         <>
-                            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-16 gap-5'>
+                            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-16 gap-5'>
                                 <Suspense fallback={<Loading />}>
                                     <RecoverList
                                         recoveredItemsPromise={recoveredItemsPromise(user.email, user.accessToken)}

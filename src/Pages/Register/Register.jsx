@@ -88,8 +88,8 @@ const Register = () => {
 
     return (
         <div>
-            <Fade direction='up' triggerOnce={true}>
-                <div className='flex justify-center items-center py-96 h-screen'>
+            
+                <div data-aos="fade-up" className='flex justify-center items-center py-96 h-screen'>
                     <div className="card bg-base-100 mx-auto w-full max-w-sm shrink-0 shadow-2xl">
                         <div className="card-body">
                             <h1 className="text-center mb-4 text-purple-400 text-5xl font-bold">Register now!</h1>
@@ -136,7 +136,7 @@ const Register = () => {
                         </div>
                     </div>
                 </div>
-            </Fade>
+            
         </div>
     );
 };

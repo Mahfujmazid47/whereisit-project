@@ -15,9 +15,9 @@ const Steps = () => {
                 <div className="grid gap-6 row-gap-10 lg:grid-cols-2">
                     {/* Left Section: Steps */}
                     
-                        <div data-aos="fade-right" className="lg:py-6 lg:pr-16">
+                        <div className="lg:py-6 lg:pr-16">
                             {/* Step 1 */}
-                            <div className="flex mb-6">
+                            <div data-aos="fade-up" data-aos-delay="100" className="flex mb-6">
                                 <div className="flex flex-col items-center mr-4">
                                     <div className="flex items-center justify-center w-10 h-10 border rounded-full">
                                         1
@@ -33,7 +33,7 @@ const Steps = () => {
                             </div>
 
                             {/* Step 2 */}
-                            <div className="flex pb-6">
+                            <div data-aos="fade-up" data-aos-delay="200" className="flex pb-6">
                                 <div className="flex flex-col items-center mr-4">
                                     <div className="flex items-center justify-center w-10 h-10 border rounded-full">
                                         2
@@ -49,7 +49,7 @@ const Steps = () => {
                             </div>
 
                             {/* Step 3 */}
-                            <div className="flex mb-6">
+                            <div data-aos="fade-up" data-aos-delay="300" className="flex mb-6">
                                 <div className="flex flex-col items-center mr-4">
                                     <div className="flex items-center justify-center w-10 h-10 border rounded-full">
                                         3
@@ -65,7 +65,7 @@ const Steps = () => {
                             </div>
 
                             {/* Step 4 */}
-                            <div className="flex mb-6">
+                            <div data-aos="fade-up" data-aos-delay="400" className="flex mb-6">
                                 <div className="flex flex-col items-center mr-4">
                                     <div className="flex items-center justify-center w-10 h-10 border rounded-full">
                                         4
@@ -81,7 +81,7 @@ const Steps = () => {
                             </div>
 
                             {/* Step 5 - Success */}
-                            <div className="flex">
+                            <div data-aos="fade-up" data-aos-delay="500" className="flex">
                                 <div className="flex flex-col items-center mr-4">
                                     <div className="flex items-center justify-center w-10 h-10 border rounded-full">
                                         ✓
@@ -99,7 +99,7 @@ const Steps = () => {
 
                     {/* Right Section: Image */}
                     
-                        <div data-aos="fade-left">
+                        <div data-aos="fade-down" data-aos-delay="400">
                             <motion.img
                                 className="rounded md:w-8/12 mx-auto lg:w-10/12"
                                 src="https://i.ibb.co.com/Kp1hJrMJ/detective-woman-concept-illustration-114360-14822-removebg-preview.png"

@@ -24,13 +24,13 @@ const Slider = () => {
                         
                     </div>
                     
-                        <div data-aos="fade-left">
+                        <div data-aos="fade-right">
                             <motion.img
                                 src="https://i.ibb.co.com/rWKXsGR/detective-kids-concept-illustration-114360-14825-removebg-preview.png"
                                 animate={{ y: [10, 30, 10] }}
                                 transition={{duration: 3, repeat: Infinity }}
 
-                                className="max-w-[400px] md:h-full h-[200px]  lg:max-w-sm mx-auto rounded-xl"
+                                className="max-w-[350px] md:h-full h-[200px]  lg:max-w-sm mx-auto rounded-xl"
                             />
                         </div>
                     
