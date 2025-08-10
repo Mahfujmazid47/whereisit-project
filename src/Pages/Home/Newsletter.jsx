@@ -19,10 +19,10 @@ const Newsletter = () => {
       <div className="max-w-5xl mx-auto text-center">
         
         {/* Heading */}
-        <h2 className="text-3xl md:text-4xl font-bold text-purple-500">
-          Stay Updated with <span className="text-gray-800">WhereIsIt</span>
+        <h2 className="text-3xl md:text-4xl font-bold">
+          <span className=' text-purple-500'>Stay Updated with</span> <span className="">WhereIsIt</span>
         </h2>
-        <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
+        <p className="mt-4 max-w-2xl mx-auto">
           Subscribe to our newsletter and be the first to know about newly added lost & found items, 
           recovery success stories, and helpful tips to keep your belongings safe.
         </p>
@@ -40,14 +40,14 @@ const Newsletter = () => {
           />
           <button
             type="submit"
-            className="px-6 py-3 bg-purple-500 text-white font-semibold rounded-lg shadow-md hover:bg-purple-600 hover:scale-105 transition-transform duration-300 cursor-pointer"
+            className="px-6 py-3 text-white bg-purple-500 font-semibold rounded-lg shadow-md hover:bg-purple-600 hover:scale-105 transition-transform duration-300 cursor-pointer"
           >
             Subscribe
           </button>
         </form>
 
         {/* Extra Info */}
-        <div className="mt-6 text-sm text-gray-500">
+        <div className="mt-6 text-sm">
           We care about your privacy. Unsubscribe anytime.  
         </div>
       </div>

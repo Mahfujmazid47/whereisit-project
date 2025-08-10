@@ -70,7 +70,7 @@ const LostFoundItems = () => {
                         onChange={e => setSearchText(e.target.value)}
                         type="text"
                         placeholder="Search Your Item here"
-                        className="input w-60 md:w-80 rounded-l-full"
+                        className="input w-60 md:w-80 rounded-l-full focus:ring-2 focus:ring-purple-300 border-purple-500 focus:outline-none"
                     />
                     <input
                         type="submit"

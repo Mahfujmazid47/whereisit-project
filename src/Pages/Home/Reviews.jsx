@@ -51,10 +51,10 @@ const Reviews = () => {
   return (
     <section data-aos="fade-up" className="py-12 px-6 md:px-20  mt-12">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-purple-500 mb-6">
-          What  <span className="text-gray-800">People Say</span>
+        <h2 className="text-3xl md:text-4xl font-bold  mb-6">
+          <span className='text-purple-500'>What </span> <span className="">People Say</span>
         </h2>
-        <p className="text-gray-600 mb-10 max-w-2xl mx-auto">
+        <p className=" mb-10 max-w-2xl mx-auto">
           Hear from people who have used <span className="font-semibold text-purple-500">WhereIsIt</span>  
           — real stories of recovery, kindness, and community help.
         </p>

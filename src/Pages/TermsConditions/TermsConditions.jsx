@@ -5,7 +5,7 @@ const TermsConditions = () => {
     return (
          <div className="max-w-5xl mx-auto py-16 px-4">
             
-                <h1 data-aos="fade-up" className="text-4xl md:text-5xl font-bold text-center text-purple-400 mb-10">
+                <h1 data-aos="fade-up" className="text-3xl md:text-4xl font-bold text-center text-purple-400 mb-10">
                     Terms & <span className="text-black">Conditions</span>
                
             </h1>

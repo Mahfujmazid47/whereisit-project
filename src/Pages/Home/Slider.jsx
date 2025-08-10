@@ -19,8 +19,8 @@ const Slider = () => {
                 <div className='lg:p-26 md:p-14 py-8 space-y-0 md:space-y-0 md:flex justify-center items-center rounded-b-xl bg-gradient-to-r from-purple-200 to-purple-400'>
                     <div data-aos="fade-right" className='overflow-hidden'>
                         
-                            <h1 className='text-center md:text-left text-3xl md:text-4xl font-bold lg:text-5xl lg:w-3/4 mb-2'><span className='text-purple-500'>Where</span>IsIt</h1>
-                            <p className='text-base-400 text-sm text-center md:text-left md:text-base lg:w-3/4 mb-8 md:mb-0'>Reunite lost treasures and found items effortlessly – your community's dedicated lost and found platform for quick connections.</p>
+                            <h1 className='text-center md:text-left text-3xl md:text-4xl font-bold text-black lg:text-5xl lg:w-3/4 mb-2'><span className='text-purple-500'>Where</span>IsIt</h1>
+                            <p className='text-base-400 text-sm text-center md:text-left md:text-base lg:w-3/4 mb-8 md:mb-0 text-black'>Reunite lost treasures and found items effortlessly – your community's dedicated lost and found platform for quick connections.</p>
                         
                     </div>
                     
@@ -47,8 +47,8 @@ const Slider = () => {
             <div id="slide2" className="carousel-item relative w-full">
                 <div className='lg:p-26 md:p-14 py-8 space-y-5 md:space-y-0 md:flex justify-center items-center rounded-b-xl bg-gradient-to-r from-red-200 to-red-400 '>
                     <div>
-                        <h1 className='text-center md:text-left text-3xl md:text-4xl font-bold lg:text-5xl mb-2'>Report  <span className='text-red-500'>Lost Items</span></h1>
-                        <p className='text-base-400 text-sm text-center md:text-left md:text-base mb-8 md:mb-0'>Quickly report lost items by providing key details, increasing the chances of your cherished belongings being returned by finders.</p>
+                        <h1 className='text-center md:text-left text-3xl md:text-4xl font-bold lg:text-5xl mb-2 text-black'>Report  <span className='text-red-500'>Lost Items</span></h1>
+                        <p className='text-base-400 text-sm text-center md:text-left md:text-base mb-8 md:mb-0 text-black lg:w-3/4'>Quickly report lost items by providing key details, increasing the chances of your cherished belongings being returned by finders.</p>
                     </div>
                     <div>
                         <motion.img
@@ -71,8 +71,8 @@ const Slider = () => {
             <div id="slide3" className="carousel-item relative w-full">
                 <div className='lg:p-26 md:p-14 py-8 space-y-5 md:space-y-0 md:flex justify-center items-center rounded-b-xl bg-gradient-to-r from-sky-200 to-sky-400'>
                     <div>
-                        <h1 className='text-center md:text-left text-3xl md:text-4xl font-bold lg:text-5xl mb-2'>Browse  <span className='text-sky-500'>Found Items</span></h1>
-                        <p className='text-base-400 text-sm text-center md:text-left md:text-base mb-8 md:mb-0'>Explore our Browse Found Items section to quickly view recently submitted belongings and hopefully reunite with your lost possessions.</p>
+                        <h1 className='text-center md:text-left text-3xl md:text-4xl font-bold lg:text-5xl mb-2 text-black'>Browse  <span className='text-sky-500'>Found Items</span></h1>
+                        <p className='text-base-400 text-sm text-center md:text-left md:text-base mb-8 md:mb-0 text-black lg:w-3/4'>Explore our Browse Found Items section to quickly view recently submitted belongings and hopefully reunite with your lost possessions.</p>
                     </div>
                     <div>
                         <motion.img
@@ -94,8 +94,8 @@ const Slider = () => {
             <div id="slide4" className="carousel-item relative w-full">
                 <div className='lg:p-26 md:p-14 py-8 space-y-5 md:space-y-0 md:flex justify-center items-center rounded-b-xl bg-gradient-to-r from-green-200 to-green-400'>
                     <div>
-                        <h1 className='text-center md:text-left text-3xl md:text-4xl font-bold lg:text-5xl mb-2'>Interact <span className='text-green-600'>to Recover </span></h1>
-                        <p className='text-base-400 text-sm text-center md:text-left md:text-base mb-8 md:mb-0'>Engage directly with finders and owners through our platform to securely coordinate the successful recovery of your lost possessions.</p>
+                        <h1 className='text-center md:text-left text-3xl md:text-4xl font-bold lg:text-5xl mb-2 text-black'>Interact <span className='text-green-600'>to Recover </span></h1>
+                        <p className='text-base-400 text-sm text-center md:text-left md:text-base mb-8 md:mb-0 text-black lg:w-3/4'>Engage directly with finders and owners through our platform to securely coordinate the successful recovery of your lost possessions.</p>
                     </div>
                     <div>
                         <motion.img
